@@ -1,0 +1,1864 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1700px) {
+
+.dreamhub_menu > ul > li > a {
+    margin: 30px 15px;
+    font-size: 16px;
+}
+
+.sticky-nav .dreamhub_menu li a {
+    color: #fff;
+    margin: 30px 15px;
+    font-size: 15px;
+}
+
+.sticky-nav .header-search-button.search-box-outer a {
+    width: 34px;
+    height: 34px;
+    line-height: 35px;
+    background: #fff;
+}
+
+a.logo_img img {
+    width: 170px !important;
+}
+
+
+
+.header-button a {
+    padding: 10px 30px;
+    font-size: 14px;
+}
+
+.dreamhub-section-title h1 {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.about-item-list ul li {
+    font-size: 17px;
+}
+
+.hero-shape {
+    display: none;
+}
+
+.hero-shape2 {
+    display: none;
+}
+
+.hero-shape3 {
+    display: none;
+}
+
+.testi-shape {
+    bottom: -100px;
+    right: 0;
+}
+
+.owl-nav {
+    display: none;
+}
+
+
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+a.logo_img img {
+    width: 90%;
+}
+
+a.main_sticky img {
+    width: 80%;
+}
+
+nav.dreamhub_menu {
+    text-align: left;
+}
+
+.dreamhub_menu > ul > li > a {
+    font-size: 15px;
+    margin: 29px 12px;
+}
+
+.header-button {
+    font-size: 14px;
+    padding: 10px 21px;
+}
+
+.header-search-button.search-box-outer {
+    padding: 0 12px 0 12px;
+}
+
+.sticky-nav .dreamhub_menu li a {
+    font-size: 15px;
+    margin: 29px 8px;
+}
+
+
+nav.dreamhub_menu span {
+    font-size: 12px;
+    padding-left: 3px;
+}
+
+/*Hero section
+=================*/
+
+.hero-content h1 {
+    font-size: 40px;
+}
+
+.hero-description p {
+    width: 90%;
+}
+
+.hero-shape3 {
+    display: none;
+}
+
+.hero-shape {
+    display: none;
+}
+
+
+/*start Section title
+========================*/
+
+.dreamhub-section-title h1 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.text-center.dreamhub-section-title p {
+    padding: 15px 0 45px;
+    width: 65%;
+}
+
+h1.tutoring-title {
+    font-size: 100px !important;
+}
+
+/*About Setction*/
+
+.about-thumb img {
+    width: 100%;
+}
+
+/*Service area
+=================*/
+
+.dreamhub-service-box {
+    padding: 35px 30px 20px;
+}
+
+h2.service-title {
+    font-size: 19px;
+}
+
+p.service-desctiption {
+    font-size: 15px;
+}
+
+a.service-button {
+    font-size: 15px;
+}
+
+/*Tutoring
+===============*/
+
+.tutor-thumb img {
+    width: 100%;
+}
+
+/*Feature section
+=====================*/
+
+.tab_container {
+    padding: 40px 30px 30px;
+}
+
+.accordion li a {
+    font-size: 16px;
+    padding: 14px 20px 14px 20px;
+}
+
+.accordion li p {
+    font-size: 15px;
+    padding: 25px 20px 25px 20px;
+}
+
+h3.form-title {
+    font-size: 20px;
+}
+
+.contact-form-box2 {
+    padding: 40px 30px 40px;
+}
+
+/*Testimonial
+================*/
+
+
+
+
+/*blog section
+==================*/
+
+.post-categories p {
+    font-size: 14px;
+}
+
+.blog-title h2 a {
+    font-size: 19px;
+    line-height: 27px;
+}
+
+.blog-button a {
+    font-size: 15px;
+} 
+
+.tutor-blog-content {
+    padding: 30px 15px 30px;
+}
+
+.recipe-meta .recipe-steps, .recipe-meta .recipe-duration {
+    margin-left: 15px;
+}
+
+.recipe-meta span {
+    font-size: 12px;
+} 
+
+.recipe-difficulty-inner span {
+    height: 5px;
+}
+
+.recipe-difficulty-inner span:nth-child(2) {
+    height: 8px;
+}
+
+.recipe-difficulty-inner span:nth-child(3) {
+    height: 10px;
+}
+
+
+
+
+
+
+/*inner page
+======================================*/
+
+.breatcam-section {
+    height: 350px;
+}
+
+/*team
+=============*/
+
+.team-title h4 {
+    font-size: 15px;
+}
+
+.team-title h2 a {
+    font-size: 19px;
+}
+
+.instructor-info ul li {
+    margin: 6px 4px 0;
+    font-size: 14px;
+}
+
+
+/*Faq Section
+================*/
+
+.faq-content p {
+    font-size: 15px;
+}
+
+
+/*pricing
+==============*/
+
+.pricing-body {
+    padding: 30px 35px 0;
+    text-align: left;
+}
+
+/*Course section
+====================*/
+
+.widget-check-box .subscribe input {
+    width: 71% !important;
+    height: 60px;
+}
+
+.course-section .recipe-meta .recipe-steps, .course-section .recipe-meta .recipe-duration {
+    margin-left: 10px;
+}
+
+.recipe-meta span i {
+    margin-right: 7px;
+    color: #00bea1;
+}
+
+.course-section .recipe-meta span {
+    font-size: 13px;
+}
+
+.rpost-title h4 {
+    margin: 0;
+}
+
+.course-section .blog-title h2 a {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.blog-desc p {
+    font-size: 15px;
+}
+
+.course-section .tutor-blog-thumb img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.dreamhub-widget {
+    padding: 35px 25px 35px;
+}
+
+.course-dtls-section .tabs li a {
+    font-size: 16px;
+    width: 129px;
+}
+
+.course-widget-warp {
+    padding: 40px 35px 40px 35px;
+}
+
+/*Blog Details
+====================*/
+
+.widget-items {
+    padding: 40px 20px 18px;
+}
+
+.rpost-thumb {
+    padding-right: 15px;
+}
+
+.rpost-thumb a img {
+    width: 100%;
+}
+
+.rpost-title span {
+    font-size: 14px;
+}
+
+
+.tag-item2 a {
+    padding: 5px 9px;
+    font-size: 14px;
+}
+
+.rpost-title h4 a {
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.widget-check-box {
+    padding: 40px 30px 18px;
+}
+
+.blogs-section .widget-check-box .subscribe input {
+    width: 61% !important;
+    height: 55px;
+}
+
+/*Contact form
+=========================*/
+
+
+.contact-info-section .contacts-icon i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.contact-info-section .contacts-icon {
+    margin-right: 14px;
+}
+
+.contact-info-section .contacts-title h6 {
+    font-size: 17px;
+}
+
+.contact-info-section .contacts-title h5 {
+    font-size: 16px;
+}
+
+.people-discription p {
+    width: 95%;
+}
+
+iframe {
+    padding-right: 0;
+    width: 100% !important;
+}
+
+
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+.header-top-section {
+    display: none;
+}
+
+.dreamhub_nav_manu {
+    display: none;
+}
+
+.sticky {
+	position: relative !important;
+}
+
+/*Hero section
+====================*/
+
+.hero-content h1 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.hero-thumb img {
+    width: inherit;
+    margin-top: 50px;
+}
+
+.hero-description p {
+    font-size: 16px;
+}
+
+.hero-button a {
+    padding: 13px 30px;
+    font-size: 15px;
+}
+
+.hero-shape {
+    display: none;
+}
+
+.hero-shape2 {
+    display: none;
+}
+
+.hero-shape3 {
+    display: none;
+}
+
+/*start Section title
+============================*/
+
+.dreamhub-section-title h1 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.text-center.dreamhub-section-title p {
+    width: 85%;
+    padding: 15px 0 45px;
+}
+
+.dreamhub-section-title p {
+    font-size: 16px;
+}
+
+/*start About Section
+=======================*/
+
+.about-thumb {
+    margin-bottom: 30px;
+}
+
+/*Service area
+==================*/
+
+.dreamhub-service-box {
+    padding: 40px 30px 25px;
+}
+
+h2.service-title {
+    font-size: 20px;
+}
+
+
+
+/*Tutor section*/
+
+.turor-section .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+.turor-section.style-two .tutor-thumb {
+    padding: 0px 0 40px 0px;
+}
+
+.turor-section.style-three .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+/*testimonial*/
+
+.testimonial-single-box {
+    margin-top: 30px;
+}
+
+
+/*Blog section
+================*/
+
+.post-categories p {
+    font-size: 14px;
+}
+
+.blog-title h2 a {
+    font-size: 19px;
+    line-height: 27px;
+}
+
+.blog-button a {
+    font-size: 15px;
+} 
+
+.tutor-blog-content {
+    padding: 30px 15px 30px;
+}
+
+.recipe-meta .recipe-steps, .recipe-meta .recipe-duration {
+    margin-left: 15px;
+}
+
+.recipe-meta span {
+    font-size: 15px;
+}
+
+.recipe-difficulty-inner span {
+    height: 5px;
+}
+
+.recipe-difficulty-inner span:nth-child(2) {
+    height: 8px;
+}
+
+.recipe-difficulty-inner span:nth-child(3) {
+    height: 10px;
+}
+
+/*Subscribe Section
+=======================*/
+
+.subscribe input {
+    width: 60%;
+}
+
+button.subscribe-btn {
+    font-size: 13px;
+    padding: 13px 24px;
+}
+
+
+/*footer area
+====================*/
+
+.company-info-desc p {
+    width: 100%;
+}
+
+.company-contact-info p {
+    font-size: 14px;
+}
+
+h4.widget-title {
+    padding: 18px 0 24px;
+}
+
+/*inner page
+======================================*/
+
+.breatcam-section {
+    height: 330px;
+}
+
+
+
+/*Faq Section
+==================*/
+
+.faq-thumb {
+    margin-top: 30px;
+}
+
+.faq-thumb {
+    padding-left: 0;
+}
+
+/*Course section*/
+
+.course-section .recipe-meta .recipe-steps, .course-section .recipe-meta .recipe-duration {
+    margin-left: 13px;
+}
+
+.upp .recipe-meta span {
+    font-size: 14px;
+}
+
+.course-section .tutor-blog-thumb img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Blog Details*/
+
+.tag-item2 {
+    padding: 30px 0 30px;
+}
+
+.blog-dtls-desc {
+    padding-top: 30px;
+}
+
+/*Contact form
+=========================*/
+
+.contact-thumb {
+    margin: 0px 0 30px 0;
+}
+
+.contact-information2 {
+    margin-bottom: 35px;
+}
+
+.contact-info-section .contacts-icon {
+    margin-right: 15px;
+}
+
+.contact-info-section .contacts-title h6 {
+    font-size: 18px;
+}
+
+.contact-info-section .contacts-title h5 {
+    font-size: 16px;
+}
+
+.contact-form {
+    margin-bottom: 30px;
+}
+
+iframe {
+    padding-right: 0;
+    width: 100% !important;
+}
+
+
+
+}
+
+/* Large Mobile :600px. */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+
+.header-top-section {
+    display: none;
+}
+
+.dreamhub_nav_manu {
+    display: none;
+}
+
+.sticky {
+    position: relative !important;
+}
+
+/*Hero section
+====================*/
+
+.hero-content h1 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.hero-thumb img {
+    width: inherit;
+    margin-top: 50px;
+}
+
+.hero-description p {
+    font-size: 16px;
+}
+
+.hero-button a {
+    padding: 13px 30px;
+    font-size: 15px;
+}
+
+.hero-shape {
+    display: none;
+}
+
+.hero-shape2 {
+    display: none;
+}
+
+.hero-shape3 {
+    display: none;
+}
+
+/*start Section title
+============================*/
+
+.dreamhub-section-title h1 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.text-center.dreamhub-section-title p {
+    width: 100%;
+    padding: 15px 0 45px;
+}
+
+.dreamhub-section-title p {
+    font-size: 16px;
+}
+
+/*start About Section
+=======================*/
+
+.about-thumb {
+    margin-bottom: 30px;
+}
+
+/*Service area
+==================*/
+
+.dreamhub-service-box {
+    padding: 40px 30px 25px;
+}
+
+h2.service-title {
+    font-size: 20px;
+}
+
+
+
+/*Tutor section*/
+
+.turor-section .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+.turor-section.style-two .tutor-thumb {
+    padding: 0px 0 40px 0px;
+}
+
+.turor-section.style-three .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+/*testimonial*/
+
+.testimonial-single-box {
+    margin-top: 30px;
+}
+
+
+/*Blog section
+================*/
+
+.post-categories p {
+    font-size: 14px;
+}
+
+.blog-title h2 a {
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.blog-button a {
+    font-size: 15px;
+} 
+
+/*Subscribe Section
+=======================*/
+
+.subscribe input {
+    width: 76%;
+    margin-top: 30px;
+}
+
+button.subscribe-btn {
+    font-size: 13px;
+    padding: 13px 24px;
+}
+
+/*Accordion*/
+
+.accordion li a {
+    font-size: 16px;
+    padding: 14px 20px 14px 20px;
+}
+
+
+
+/*footer area
+=================*/
+
+.company-info-desc p {
+    width: 100%;
+}
+
+.company-contact-info p {
+    font-size: 14px;
+}
+
+h4.widget-title {
+    padding: 18px 0 24px;
+}
+
+.footer-bottom-content-copy span {
+    font-size: 14px;
+}
+
+.footer-bottom-right-menu {
+    text-align: center;
+}
+
+.row.footer-bottom {
+    text-align: center;
+}
+
+
+/*Inner page
+=======================================*/
+
+/*breatcam*/
+
+.breatcam-section {
+    height: 330px;
+}
+
+.breatcam-title h1 {
+    font-size: 40px;
+}
+
+/*brand
+============*/
+
+.owl-nav {
+    display: none;
+}
+
+/*Faq section
+=================*/
+
+.faq-thumb {
+    margin-top: 30px;
+}
+
+.faq-thumb {
+    padding-left: 0;
+}
+
+/*course sectoin
+=================*/
+
+.course-section .tutor-blog-thumb img {
+    width: 100%;
+}
+
+.course-section .tutor-single-blog-box2 .tutor-blog-thumb img {
+    height: 100%;
+}
+
+.course-section .blog-title h2 a {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.tutor-single-blog-box2 {
+    display: inline-block;
+}
+
+.course-dtls-section .tabs li a {
+    font-size: 17px;
+    width: 106px;
+}
+
+.course-dtls-section .tab {
+    padding: 42px 0px 0 0px;
+}
+
+/*error*/
+
+.error-thumb img {
+    width: 100%;
+}
+
+.single_team_box:hover .single_team_icon2 a {
+    transform: translateX(196px);
+}
+
+/*Blog Details*/
+
+
+.pagination-menu {
+    padding: 30px 0 35px;
+}
+
+
+.tag-item2 {
+    padding: 30px 0 30px;
+}
+
+
+.blog-quotes {
+    font-size: 16px;
+    padding: 24px 20px 24px 20px;
+}
+
+.tag-item2 a {
+    padding: 5px 9px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    margin-bottom: 30px;
+}
+
+.blog-quotes p {
+    font-size: 17px;
+}
+
+.blog-dtls-desc {
+    padding-top: 30px;
+}
+
+.blog-contents .blog-title h2 a {
+    font-size: 27px;
+}
+
+/*Contact form
+=========================*/
+
+.contact-information2 {
+    margin-bottom: 35px;
+}
+
+.contact-info-section .contacts-icon {
+    margin-right: 15px;
+}
+
+.contact-info-section .contacts-title h6 {
+    font-size: 18px;
+}
+
+.contact-info-section .contacts-title h5 {
+    font-size: 16px;
+}
+
+.people-address-info {
+    margin-left: 0;
+}
+
+.people-discription p {
+    width: 85%;
+}
+
+iframe {
+    padding-right: 0;
+    width: 100%;
+}
+
+
+}
+
+/* small mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+
+.header-top-section {
+    display: none;
+}
+
+.dreamhub_nav_manu {
+    display: none;
+}
+
+.sticky {
+    position: relative !important;
+}
+
+/*Hero section
+====================*/
+
+.hero-content h1 {
+    font-size: 33px;
+    line-height: 33px;
+}
+
+.hero-thumb img {
+    width: inherit;
+    margin-top: 50px;
+}
+
+.hero-description p {
+    font-size: 16px;
+    width: 100%;
+}
+
+.hero-button a {
+    padding: 13px 20px;
+    font-size: 15px;
+}
+
+.hero-shape {
+    display: none;
+}
+
+.hero-shape2 {
+    display: none;
+}
+
+.hero-shape3 {
+    display: none;
+}
+
+/*start Section title
+============================*/
+
+.dreamhub-section-title h1 {
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.text-center.dreamhub-section-title p {
+    width: 100%;
+    padding: 15px 0 45px;
+}
+
+.dreamhub-section-title p {
+    font-size: 16px;
+}
+
+/*start About Section
+=======================*/
+
+.about-thumb img {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/*Service area
+==================*/
+
+.dreamhub-service-box {
+    padding: 40px 30px 25px;
+}
+
+h2.service-title {
+    font-size: 20px;
+}
+
+
+
+/*Tutor section*/
+
+.turor-section .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+.turor-section.style-two .tutor-thumb {
+    padding: 0px 0 40px 0px;
+}
+
+.turor-section.style-three .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+h1.tutoring-title {
+    font-size: 90px !important;
+}
+
+.tutor-thumb img {
+    width: 100%;
+}
+
+/*testimonial*/
+
+.testimonial-section .dreamhub-section-title.padding-lg {
+    padding-bottom: 0;
+}
+
+
+/*Blog section
+================*/
+
+.post-categories p {
+    font-size: 14px;
+}
+
+.blog-title h2 a {
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.blog-button a {
+    font-size: 15px;
+} 
+
+/*Subscribe Section
+=======================*/
+
+.subscribe input {
+    width: 73%;
+    margin-top: 30px;
+}
+
+button.subscribe-btn {
+    font-size: 13px;
+    padding: 13px 24px;
+}
+
+/*Accordion*/
+
+.tab_container {
+    padding: 20px 30px 30px;
+    margin-top: 30px;
+}
+
+.accordion li a {
+    font-size: 16px;
+    padding: 14px 20px 14px 10px;
+}
+
+
+
+/*footer area
+=================*/
+
+.company-info-desc p {
+    width: 100%;
+}
+
+.company-contact-info p {
+    font-size: 14px;
+}
+
+h4.widget-title {
+    padding: 18px 0 24px;
+}
+
+.footer-bottom-content-copy span {
+    font-size: 14px;
+}
+
+.footer-bottom-right-menu {
+    text-align: center;
+}
+
+.row.footer-bottom {
+    text-align: center;
+}
+
+
+/*Inner Page
+=======================================*/
+
+/*breatcam*/
+
+.breatcam-section {
+    height: 330px;
+}
+
+.breatcam-title h1 {
+    font-size: 44px;
+}
+
+/*pricing*/
+
+.pricing-section {
+    padding: 70px 0 10px;
+}
+
+
+/*Subscribe
+==============*/
+
+.subscribe-widget form {
+    float: left;
+    width: inherit;
+    margin-top: 30px;
+}
+
+/*Faq*/
+
+.faq-thumb {
+    padding-left: 0;
+}
+ 
+
+h2.accordion-title {
+    font-size: 27px;
+}
+
+.error-thumb img {
+    width: 100%;
+}
+
+.error-content h2 {
+    font-size: 30px;
+}
+
+.error-content p {
+    font-size: 17px;
+}
+
+.error-button a {
+    font-size: 15px;
+}
+
+/*Course*/
+
+.widget-check-box .subscribe input {
+    width: 84% !important;
+    height: 60px;
+}
+
+.tutor-single-blog-box2 {
+    display: inline-block;
+}
+
+.course-dtls-section .tabs li a {
+    font-size: 16px;
+    width: 102px;
+    margin-left: 5px;
+}
+
+.course-dtls-section .tab {
+    padding: 42px 0px 0 0px;
+}
+
+.tab_container2 .accordion li p {
+    font-size: 15px;
+}
+
+
+/*Blog Details
+=====================*/
+
+
+.pagination-menu {
+    padding: 30px 0 35px;
+}
+
+
+.blog-quotes {
+    font-size: 18px;
+    padding: 24px 20px 24px 20px;
+}
+
+.blog-quotes span {
+    font-size: 15px;
+}
+
+.tag-item2 {
+    padding: 30px 0 30px;
+}
+
+.blog-dtls-desc {
+    padding-top: 30px;
+}
+
+.blog-quotes p {
+    font-size: 16px;
+}
+
+.blogs-section .widget-check-box .subscribe input {
+    width: 82% !important;
+    height: 55px;
+}
+
+.blog-contents .blog-title h2 a {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/*Contact form
+=========================*/
+
+.contact-thumb {
+    margin-bottom: 30px;
+}
+
+.contact-thumb img {
+    width: 100%;
+}
+
+.contact-shape2 {
+    right: 15px;
+}
+
+.contact-information2 {
+    margin-bottom: 35px;
+}
+
+.contact-info-section .contacts-icon {
+    margin-right: 15px;
+}
+
+.contact-info-section .contacts-title h6 {
+    font-size: 18px;
+}
+
+.contact-info-section .contacts-title h5 {
+    font-size: 16px;
+}
+
+.people-address-info {
+    margin-left: 0;
+    margin-top: 25px;
+}
+
+.people-discription p {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    padding: 0;
+}
+
+
+}
+
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+.header-top-section {
+    display: none;
+}
+
+.dreamhub_nav_manu {
+    display: none;
+}
+
+.sticky {
+    position: relative !important;
+}
+
+/*Hero section
+====================*/
+
+.hero-content h5 {
+    font-size: 16px;
+}
+
+.hero-content h1 {
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.hero-thumb img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.hero-description p {
+    font-size: 16px;
+    width: 100%;
+}
+
+.hero-button a {
+    padding: 13px 20px;
+    font-size: 15px;
+}
+
+a.hero-btn {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.hero-shape {
+    display: none;
+}
+
+.hero-shape2 {
+    display: none;
+}
+
+.hero-shape3 {
+    display: none;
+}
+
+/*start Section title
+============================*/
+
+.dreamhub-section-title h1 {
+    font-size: 19px;
+    line-height: 19px;
+}
+
+.text-center.dreamhub-section-title p {
+    width: 100%;
+    padding: 15px 0 45px;
+}
+
+.dreamhub-section-title p {
+    font-size: 16px;
+}
+
+/*start About Section
+=======================*/
+
+.about-thumb img {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.about-content h2 {
+    font-size: 16px;
+}
+
+.about-content p {
+    width: 100%;
+}
+
+/*Service area
+==================*/
+
+.dreamhub-service-box {
+    padding: 40px 30px 25px;
+}
+
+h2.service-title {
+    font-size: 18px;
+}
+
+
+/*Tutor section*/
+
+.turor-section .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+.turor-section.style-two .tutor-thumb {
+    padding: 0px 0 40px 0px;
+}
+
+.turor-section.style-three .tutor-thumb {
+    padding: 40px 0 0 0px;
+}
+
+h1.tutoring-title {
+    font-size: 90px !important;
+}
+
+.tutor-thumb img {
+    width: 100%;
+}
+
+/*testimonial*/
+
+.testimonial-section .dreamhub-section-title.padding-lg {
+    padding-bottom: 0;
+}
+
+
+/*Blog section
+================*/
+
+.post-categories p {
+    font-size: 14px;
+}
+
+.blog-title h2 a {
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.blog-button a {
+    font-size: 15px;
+} 
+
+.tutor-blog-content {
+    padding: 30px 15px 30px;
+}
+
+.recipe-meta span {
+    font-size: 12px;
+}
+
+.recipe-difficulty-inner span {
+    height: 5px;
+}
+
+.recipe-meta .recipe-steps, .recipe-meta .recipe-duration {
+    margin-left: 15px;
+}
+
+.recipe-difficulty-inner span:nth-child(2) {
+    height: 8px;
+}
+
+.recipe-difficulty-inner span:nth-child(3) {
+    height: 10px;
+}
+
+.course-section .recipe-meta .recipe-steps, .course-section .recipe-meta .recipe-duration {
+    margin-left: 12px;
+}
+
+/*Subscribe Section
+=======================*/
+
+.subscribe-title h3 {
+    font-size: 19px;
+}
+
+.subscribe input {
+    width: 58%;
+    margin-top: 30px;
+}
+
+button.subscribe-btn {
+    font-size: 13px;
+    padding: 13px 24px;
+}
+
+/*Accordion*/
+
+.tab_container {
+    padding: 20px 30px 30px;
+    margin-top: 30px;
+}
+
+.accordion li a {
+    font-size: 16px;
+    padding: 14px 20px 14px 10px;
+}
+
+
+
+/*footer area
+=================*/
+
+.company-info-desc p {
+    width: 100%;
+}
+
+.company-contact-info p {
+    font-size: 14px;
+}
+
+h4.widget-title {
+    padding: 18px 0 24px;
+}
+
+.footer-bottom-content-copy span {
+    font-size: 14px;
+}
+
+.footer-bottom-right-menu {
+    text-align: center;
+}
+
+.row.footer-bottom {
+    text-align: center;
+}
+
+/*inner Page
+=================================*/
+
+/*breatcam*/
+
+.breatcam-section {
+    height: 296px;
+}
+
+.breatcam-title h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.responsive.breatcam-title h1 {
+    font-size: 30px;
+}
+
+/*Faq section*/
+
+.single-faq-box {
+    padding: 25px 24px 20px;
+}
+
+.faq-thumb {
+    padding-left: 0;
+}
+
+.accordion li p {
+    font-size: 15px;
+    padding: 20px 15px 20px 20px;
+}
+
+h2.accordion-title {
+    font-size: 18px;
+}
+
+/*Branding
+=================*/
+
+.owl-nav {
+    display: none;
+}
+
+/*Team section
+===============*/
+
+.single_team_box:hover .single_team_icon2 a {
+    transform: translateX(34px);
+}
+
+/*pricing*/
+
+.pricing-item-text span {
+    font-size: 45px;
+}
+
+/*Course
+==============*/
+
+.widget-check-box .subscribe input {
+    width:72% !important;
+    height: 60px;
+}
+
+.tutor-single-blog-box2 {
+    display: inline-block;
+}
+
+.dreamhub-widget {
+    padding: 35px 22px 35px;
+}
+
+.course-dtls-section .tabs li a {
+    font-size: 16px;
+    width: 102px;
+    margin-left: 5px;
+}
+
+.course-dtls-section .tab {
+    padding: 42px 0px 0 0px;
+}
+
+.tab_container2 .accordion li p {
+    font-size: 15px;
+}
+
+.course-widget-warp {
+    padding: 40px 25px 40px 25px;
+}
+
+.course-widget-warp h4 {
+    font-size: 22px;
+}
+
+.course-curriculum h4 {
+    font-size: 20px;
+}
+
+.course-author-warpper {
+    display: inline-block;
+}
+
+.author-content {
+    padding-left: 0;
+}
+
+.review-wrapper .progress {
+    max-width: 80%;
+}
+
+.review-wrapper .rating-text {
+    font-size: 16px;
+}
+
+/*Error Section
+=====================*/
+
+.error-thumb img {
+    width: 100%;
+}
+
+.error-content h2 {
+    font-size: 27px;
+}
+
+.error-content p {
+    font-size: 14px;
+}
+
+.error-button a {
+    font-size: 15px;
+}
+
+.error-search input {
+    width: 85%;
+}
+
+
+/*Blog Details
+=================*/
+
+.blog-quotes span {
+    font-size: 15px;
+}
+
+.blog-quotes p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tag-item2 {
+    padding: 30px 0 30px;
+}
+
+.rpost-thumb a img {
+    width: 100%;
+}
+
+h5.blog-dtls-title {
+    font-size: 22px;
+}
+
+.tag-item2 a {
+    padding: 5px 9px;
+    font-size: 14px;
+}
+
+.pagination-menu {
+    padding: 30px 0 35px;
+}
+
+
+.blog-quotes {
+    font-size: 18px;
+    padding: 24px 20px 24px 20px;
+}
+
+.contact-form button {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.blog-dtls-desc p {
+    padding-top: 25px;
+}
+
+.widget-items {
+    padding: 40px 29px 18px;
+}
+
+.rpost-title h4 {
+    margin: 0;
+}
+
+.rpost-title h4 a {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.rpost-title span {
+    font-size: 15px;
+}
+
+.rpost-thumb {
+    padding-right: 10px;
+}
+
+.blogs-section .widget-check-box .subscribe input {
+    width: 71% !important;
+    height: 55px;
+}
+
+.blog-contents .blog-title h2 a {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.blog-contents {
+    padding: 25px 18px 25px;
+}
+
+.blog-contents .blog-title h2 a {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+
+/*Contact form
+=========================*/
+
+.contact-thumb {
+    margin-bottom: 30px;
+}
+
+.contact-thumb img {
+    width: 100%;
+}
+
+.contact-shape2 {
+    right: 15px;
+}
+
+.contact-info-section .contacts-icon {
+    margin-right: 15px;
+}
+
+.contact-info-section .contacts-title h6 {
+    font-size: 16px;
+}
+
+.contact-info-section .contacts-title h5 {
+    font-size: 15px;
+}
+
+iframe {
+    padding-left: 0;
+    width: 100%;
+}
+
+.people-address-info {
+    padding: 100px 0px 95px;
+}
+
+.social-info-icon {
+    right: 4px;
+}
+
+.people-discription p {
+    width: 86%;
+}
+
+}
+
+
+

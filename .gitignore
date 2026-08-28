@@ -1,0 +1,9 @@
+﻿# System & Editor
+.DS_Store
+Thumbs.db
+.idea/
+*.log
+
+# Temp files
+*.tmp
+*.bak

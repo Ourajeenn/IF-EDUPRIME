@@ -1,0 +1,1049 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IF EduPrime - Prise de Rendez-vous & Instructeurs</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4e73df;
+      --secondary-color: #f8f9fc;
+      --accent-color: #36b9cc;
+      --success-color: #1cc88a;
+      --warning-color: #f6c23e;
+      --danger-color: #e74a3b;
+      --dark-color: #2e384d;
+      --light-color: #ffffff;
+      --border-radius: 12px;
+      --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: var(--dark-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 5px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .nav-tab {
+      padding: 15px 30px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: var(--transition);
+      color: var(--dark-color);
+    }
+
+    .nav-tab.active {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .nav-tab:hover:not(.active) {
+      background: var(--secondary-color);
+    }
+
+    /* Sections */
+    .section {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: var(--box-shadow);
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+      font-size: 2.2rem;
+    }
+
+    /* Formulaire de réservation */
+    .booking-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--dark-color);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .btn {
+      background: var(--primary-color);
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .btn:hover {
+      background: #3a5fd9;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(78, 115, 223, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--accent-color);
+    }
+
+    .btn-secondary:hover {
+      background: #2a9bb3;
+    }
+
+    /* Barre de recherche */
+    .search-container {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 15px 50px 15px 20px;
+      border: 2px solid #e9ecef;
+      border-radius: 25px;
+      font-size: 16px;
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.1);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6c757d;
+    }
+
+    /* Grille des instructeurs */
+    .instructors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .instructor-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 25px;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .instructor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      border-color: var(--primary-color);
+    }
+
+    .instructor-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .instructor-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .instructor-info h3 {
+      color: var(--dark-color);
+      margin-bottom: 5px;
+    }
+
+    .instructor-specialty {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .instructor-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .stars {
+      color: #ffc107;
+      margin-right: 10px;
+    }
+
+    .rating-text {
+      color: #6c757d;
+      font-size: 14px;
+    }
+
+    .instructor-details {
+      margin-bottom: 20px;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .detail-item i {
+      width: 20px;
+      margin-right: 10px;
+      color: var(--primary-color);
+    }
+
+    .instructor-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      border-radius: var(--border-radius);
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #6c757d;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .nav-tabs {
+        flex-direction: column;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .instructors-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 20px;
+      }
+    }
+
+    /* Animations */
+    .fade-in {
+      animation: fadeIn 0.5s ease;
+    }
+
+    .slide-up {
+      animation: slideUp 0.5s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Statuts */
+    .status-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .status-available {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .status-busy {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .status-offline {
+      background: #e2e3e5;
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1><i class="fas fa-calendar-check"></i> Prise de Rendez-vous</h1>
+      <p>Planifiez votre session d'apprentissage avec nos instructeurs qualifiés</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('booking')">
+        <i class="fas fa-calendar-plus"></i> Réserver un RDV
+      </button>
+      <button class="nav-tab" onclick="showSection('instructors')">
+        <i class="fas fa-users"></i> Nos Instructeurs
+      </button>
+      <button class="nav-tab" onclick="showSection('schedule')">
+        <i class="fas fa-clock"></i> Planning
+      </button>
+    </div>
+
+    <!-- Section Réservation -->
+    <div id="booking" class="section active">
+      <h2><i class="fas fa-calendar-plus"></i> Réserver votre séance</h2>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName"><i class="fas fa-user"></i> Prénom</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName"><i class="fas fa-user"></i> Nom</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone"><i class="fas fa-phone"></i> Téléphone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="instructor"><i class="fas fa-chalkboard-teacher"></i> Instructeur</label>
+            <select id="instructor" name="instructor" required>
+              <option value="">Choisir un instructeur</option>
+              <option value="maths">Prof. Sarah Lehi - Mathématiques</option>
+              <option value="physics">Dr. Michael Anani- Physique</option>
+              <option value="english">Mme. Emma Wilson - Anglais</option>
+              <option value="computer">Prof. David Yao - Informatique</option>
+              <option value="chemistry">Dr. Lisa Dodo - Chimie</option>
+              <option value="french">M. Pierre Noam - Français</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="subject"><i class="fas fa-book"></i> Matière</label>
+            <select id="subject" name="subject" required>
+              <option value="">Choisir une matière</option>
+              <option value="mathematiques">Mathématiques</option>
+              <option value="physique">Physique</option>
+              <option value="anglais">Anglais</option>
+              <option value="informatique">Informatique</option>
+              <option value="chimie">Chimie</option>
+              <option value="francais">Français</option>
+              <option value="histoire">Histoire</option>
+              <option value="geographie">Géographie</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date"><i class="fas fa-calendar"></i> Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time"><i class="fas fa-clock"></i> Heure</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="duration"><i class="fas fa-hourglass-half"></i> Durée de la séance</label>
+          <select id="duration" name="duration" required>
+            <option value="">Choisir la durée</option>
+            <option value="30">30 minutes - 15€</option>
+            <option value="60">1 heure - 25€</option>
+            <option value="90">1h30 - 35€</option>
+            <option value="120">2 heures - 45€</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="level"><i class="fas fa-graduation-cap"></i> Niveau</label>
+          <select id="level" name="level" required>
+            <option value="">Choisir le niveau</option>
+            <option value="primaire">Primaire</option>
+            <option value="college">Collège</option>
+            <option value="lycee">Lycée</option>
+            <option value="superieur">Supérieur</option>
+            <option value="adulte">Formation adulte</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message"><i class="fas fa-comment"></i> Message (optionnel)</label>
+          <textarea id="message" name="message" rows="4"
+            placeholder="Décrivez vos besoins spécifiques, les points à travailler..."></textarea>
+        </div>
+
+        <button type="submit" class="btn">
+          <i class="fas fa-check"></i> Confirmer la réservation
+        </button>
+      </form>
+    </div>
+
+    <!-- Section Instructeurs -->
+    <div id="instructors" class="section">
+      <h2><i class="fas fa-users"></i> Nos Instructeurs Qualifiés</h2>
+
+      <div class="search-container">
+        <input type="text" class="search-input" id="searchInstructors"
+          placeholder="Rechercher par nom, matière ou spécialité...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+
+      <div class="instructors-grid" id="instructorsGrid">
+        <!-- Instructeur 1 -->
+        <div class="instructor-card" data-name="Sarah Johnson" data-subject="Mathématiques">
+          <div class="instructor-header">
+            <div class="instructor-avatar">SJ</div>
+            <div class="instructor-info">
+              <h3>Prof. Sarah Johnson</h3>
+              <span class="instructor-specialty">Mathématiques</span>
+            </div>
+          </div>
+
+          <div class="instructor-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="rating-text">5.0 (127 avis)</span>
+          </div>
+
+          <div class="instructor-details">
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Master en Mathématiques - Université de Paris</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span>8 ans d'expérience</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <span>500+ élèves formés</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-circle"></i>
+              <span class="status-badge status-available">Disponible</span>
+            </div>
+          </div>
+
+          <div class="instructor-actions">
+            <button class="btn btn-sm" onclick="bookInstructor('Sarah Johnson', 'Mathématiques')">
+              <i class="fas fa-calendar-plus"></i> Réserver
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="viewProfile('Sarah Johnson')">
+              <i class="fas fa-eye"></i> Profil
+            </button>
+          </div>
+        </div>
+
+        <!-- Instructeur 2 -->
+        <div class="instructor-card" data-name="Michael Chen" data-subject="Physique">
+          <div class="instructor-header">
+            <div class="instructor-avatar">MC</div>
+            <div class="instructor-info">
+              <h3>Dr. Michael Chen</h3>
+              <span class="instructor-specialty">Physique</span>
+            </div>
+          </div>
+
+          <div class="instructor-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <span class="rating-text">4.8 (89 avis)</span>
+          </div>
+
+          <div class="instructor-details">
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Doctorat en Physique - MIT</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span>12 ans d'expérience</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <span>300+ élèves formés</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-circle"></i>
+              <span class="status-badge status-busy">Occupé</span>
+            </div>
+          </div>
+
+          <div class="instructor-actions">
+            <button class="btn btn-sm" onclick="bookInstructor('Michael Chen', 'Physique')">
+              <i class="fas fa-calendar-plus"></i> Réserver
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="viewProfile('Michael Chen')">
+              <i class="fas fa-eye"></i> Profil
+            </button>
+          </div>
+        </div>
+
+        <!-- Instructeur 3 -->
+        <div class="instructor-card" data-name="Emma Wilson" data-subject="Anglais">
+          <div class="instructor-header">
+            <div class="instructor-avatar">EW</div>
+            <div class="instructor-info">
+              <h3>Mme. Emma Wilson</h3>
+              <span class="instructor-specialty">Anglais</span>
+            </div>
+          </div>
+
+          <div class="instructor-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="rating-text">4.9 (156 avis)</span>
+          </div>
+
+          <div class="instructor-details">
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Master en Langues - Oxford</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span>6 ans d'expérience</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <span>400+ élèves formés</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-circle"></i>
+              <span class="status-badge status-available">Disponible</span>
+            </div>
+          </div>
+
+          <div class="instructor-actions">
+            <button class="btn btn-sm" onclick="bookInstructor('Emma Wilson', 'Anglais')">
+              <i class="fas fa-calendar-plus"></i> Réserver
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="viewProfile('Emma Wilson')">
+              <i class="fas fa-eye"></i> Profil
+            </button>
+          </div>
+        </div>
+
+        <!-- Instructeur 4 -->
+        <div class="instructor-card" data-name="David Kim" data-subject="Informatique">
+          <div class="instructor-header">
+            <div class="instructor-avatar">DK</div>
+            <div class="instructor-info">
+              <h3>Prof. David Kim</h3>
+              <span class="instructor-specialty">Informatique</span>
+            </div>
+          </div>
+
+          <div class="instructor-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="rating-text">4.7 (203 avis)</span>
+          </div>
+
+          <div class="instructor-details">
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Ingénieur en Informatique - Stanford</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span>10 ans d'expérience</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <span>600+ élèves formés</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-circle"></i>
+              <span class="status-badge status-available">Disponible</span>
+            </div>
+          </div>
+
+          <div class="instructor-actions">
+            <button class="btn btn-sm" onclick="bookInstructor('David Kim', 'Informatique')">
+              <i class="fas fa-calendar-plus"></i> Réserver
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="viewProfile('David Kim')">
+              <i class="fas fa-eye"></i> Profil
+            </button>
+          </div>
+        </div>
+
+        <!-- Instructeur 5 -->
+        <div class="instructor-card" data-name="Lisa Rodriguez" data-subject="Chimie">
+          <div class="instructor-header">
+            <div class="instructor-avatar">LR</div>
+            <div class="instructor-info">
+              <h3>Dr. Lisa Rodriguez</h3>
+              <span class="instructor-specialty">Chimie</span>
+            </div>
+          </div>
+
+          <div class="instructor-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <span class="rating-text">4.6 (78 avis)</span>
+          </div>
+
+          <div class="instructor-details">
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Doctorat en Chimie - Harvard</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span>8 ans d'expérience</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <span>250+ élèves formés</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-circle"></i>
+              <span class="status-badge status-offline">Hors ligne</span>
+            </div>
+          </div>
+
+          <div class="instructor-actions">
+            <button class="btn btn-sm" onclick="bookInstructor('Lisa Rodriguez', 'Chimie')">
+              <i class="fas fa-calendar-plus"></i> Réserver
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="viewProfile('Lisa Rodriguez')">
+              <i class="fas fa-eye"></i> Profil
+            </button>
+          </div>
+        </div>
+
+        <!-- Instructeur 6 -->
+        <div class="instructor-card" data-name="Pierre Dubois" data-subject="Français">
+          <div class="instructor-header">
+            <div class="instructor-avatar">PD</div>
+            <div class="instructor-info">
+              <h3>M. Pierre Dubois</h3>
+              <span class="instructor-specialty">Français</span>
+            </div>
+          </div>
+
+          <div class="instructor-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="rating-text">4.9 (134 avis)</span>
+          </div>
+
+          <div class="instructor-details">
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Master en Littérature - Sorbonne</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-clock"></i>
+              <span>15 ans d'expérience</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-users"></i>
+              <span>700+ élèves formés</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-circle"></i>
+              <span class="status-badge status-available">Disponible</span>
+            </div>
+          </div>
+
+          <div class="instructor-actions">
+            <button class="btn btn-sm" onclick="bookInstructor('Pierre Dubois', 'Français')">
+              <i class="fas fa-calendar-plus"></i> Réserver
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="viewProfile('Pierre Dubois')">
+              <i class="fas fa-eye"></i> Profil
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Planning -->
+    <div id="schedule" class="section">
+      <h2><i class="fas fa-clock"></i> Planning des Séances</h2>
+
+      <div class="schedule-container">
+        <div class="schedule-filters">
+          <button class="btn btn-sm" onclick="filterSchedule('all')">Tous les jours</button>
+          <button class="btn btn-secondary btn-sm" onclick="filterSchedule('today')">Aujourd'hui</button>
+          <button class="btn btn-secondary btn-sm" onclick="filterSchedule('week')">Cette semaine</button>
+        </div>
+
+        <div class="schedule-grid" id="scheduleGrid">
+          <!-- Les créneaux seront générés dynamiquement -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de confirmation -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Confirmation de réservation</h3>
+        <button class="close-modal" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modalBody">
+        <!-- Contenu dynamique -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Navigation entre les sections
+    function showSection(sectionId) {
+      // Masquer toutes les sections
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Désactiver tous les onglets
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      // Afficher la section sélectionnée
+      document.getElementById(sectionId).classList.add('active');
+
+      // Activer l'onglet correspondant
+      event.target.classList.add('active');
+    }
+
+    // Recherche d'instructeurs
+    document.getElementById('searchInstructors').addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const cards = document.querySelectorAll('.instructor-card');
+
+      cards.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        const subject = card.dataset.subject.toLowerCase();
+
+        if (name.includes(searchTerm) || subject.includes(searchTerm)) {
+          card.style.display = 'block';
+          card.classList.add('fade-in');
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Réservation d'instructeur
+    function bookInstructor(name, subject) {
+      showSection('booking');
+      document.getElementById('instructor').value = name + ' - ' + subject;
+      document.getElementById('subject').value = subject.toLowerCase();
+    }
+
+    // Affichage du profil
+    function viewProfile(name) {
+      // Ici vous pouvez ajouter une modal avec les détails du profil
+      alert(`Profil de ${name} - Fonctionnalité à développer`);
+    }
+
+    // Gestion du formulaire de réservation
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      const bookingData = Object.fromEntries(formData);
+
+      // Afficher la modal de confirmation
+      showBookingConfirmation(bookingData);
+    });
+
+    // Affichage de la confirmation
+    function showBookingConfirmation(data) {
+      const modal = document.getElementById('bookingModal');
+      const modalBody = document.getElementById('modalBody');
+
+      modalBody.innerHTML = `
+        <div class="booking-summary">
+          <h4><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Réservation confirmée !</h4>
+          <p><strong>Nom :</strong> ${data.firstName} ${data.lastName}</p>
+          <p><strong>Instructeur :</strong> ${data.instructor}</p>
+          <p><strong>Matière :</strong> ${data.subject}</p>
+          <p><strong>Date :</strong> ${data.date}</p>
+          <p><strong>Heure :</strong> ${data.time}</p>
+          <p><strong>Durée :</strong> ${data.duration} minutes</p>
+          <p><strong>Niveau :</strong> ${data.level}</p>
+          ${data.message ? `<p><strong>Message :</strong> ${data.message}</p>` : ''}
+        </div>
+        <div style="margin-top: 20px;">
+          <button class="btn" onclick="closeModal()">Fermer</button>
+        </div>
+      `;
+
+      modal.style.display = 'block';
+    }
+
+    // Fermeture de la modal
+    function closeModal() {
+      document.getElementById('bookingModal').style.display = 'none';
+    }
+
+    // Fermeture de la modal en cliquant à l'extérieur
+    window.onclick = function (event) {
+      const modal = document.getElementById('bookingModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Génération du planning
+    function generateSchedule() {
+      const scheduleGrid = document.getElementById('scheduleGrid');
+      const days = [ 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche' ];
+      const timeSlots = [ '09:00', '10:00', '11:00', '14:00', '15:00', '16:00', '17:00' ];
+
+      let scheduleHTML = '';
+
+      days.forEach(day => {
+        scheduleHTML += `
+          <div class="day-column">
+            <h4>${day}</h4>
+            ${timeSlots.map(time => `
+              <div class="time-slot ${Math.random() > 0.7 ? 'booked' : 'available'}">
+                <span class="time">${time}</span>
+                <span class="status">${Math.random() > 0.7 ? 'Réservé' : 'Libre'}</span>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      });
+
+      scheduleGrid.innerHTML = scheduleHTML;
+    }
+
+    // Filtrage du planning
+    function filterSchedule(filter) {
+      // Logique de filtrage à implémenter
+      console.log('Filtrage:', filter);
+    }
+
+    // Initialisation
+    document.addEventListener('DOMContentLoaded', function () {
+      generateSchedule();
+
+      // Définir la date minimale à aujourd'hui
+      const today = new Date().toISOString().split('T')[ 0 ];
+      document.getElementById('date').min = today;
+    });
+  </script>
+</body>
+
+</html>
