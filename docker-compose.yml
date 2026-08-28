@@ -1,0 +1,51 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eduprime-web
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./html:/usr/share/nginx/html/html:ro
+      - ./css:/usr/share/nginx/html/css:ro
+      - ./js:/usr/share/nginx/html/js:ro
+      - ./jpg:/usr/share/nginx/html/jpg:ro
+      - ./png:/usr/share/nginx/html/png:ro
+      - ./svg:/usr/share/nginx/html/svg:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - eduprime-network
+    labels:
+      - "com.eduprime.description=IF-EDUprime Web Application"
+      - "com.eduprime.version=1.0"
+
+  nginx-proxy:
+    image: nginx:alpine
+    container_name: eduprime-proxy
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - web
+    restart: unless-stopped
+    networks:
+      - eduprime-network
+    profiles:
+      - production
+
+networks:
+  eduprime-network:
+    driver: bridge

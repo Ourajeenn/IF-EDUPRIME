@@ -1,0 +1,12 @@
+﻿.git
+.gitignore
+.vscode
+.dockerignore
+.gitlab-ci.yml
+Dockerfile
+docker-compose.yml
+nginx.conf
+default.conf
+Makefile
+DOCKER-README.md
+*.md
