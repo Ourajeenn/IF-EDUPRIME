@@ -40,3 +40,30 @@
 			.bg-light-gradient-top{background:rgba(221,218,255,.3);background:linear-gradient(180deg,rgba(221,218,255,.3),hsla(0,0%,100%,0) 80%);
 				background:-moz-linear-gradient(180deg,rgba(221,218,255,.3) 0,hsla(0,0%,100%,0) 80%)}
 				.bg-gradient-mix-shade{background:linear-gradient(270.06deg,#4a52ff .05%,#c678ff 54.16%,#fe5d75 99.95%)}@media (min-width:768px){.mw-md-130{max-width:130%!important}}
+
+/* Scroll Top Button */
+.btn-scroll-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    display: block;
+    border-radius: 0.5rem;
+    z-index: 1030;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.btn-scroll-top.active-progress {
+    opacity: 1;
+    visibility: visible;
+}
+.btn-scroll-top svg.progress-square path {
+    fill: none;
+    stroke: #754ffe;
+    stroke-width: 4;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}

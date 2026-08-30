@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
@@ -627,12 +627,12 @@
 	<div class="chatbot-messages" id="chatMessages">
 		<div class="message bot welcome-message">
 			<div class="message-content">
-				<p>👋 Bonjour ! Je suis votre assistant If-EDUprime.</p>
+				<p>?? Bonjour ! Je suis votre assistant If-EDUprime.</p>
 				<p>Comment puis-je vous aider aujourd'hui ?</p>
 				<div class="quick-replies">
-					<button class="quick-reply" data-query="cours">📚 Voir les cours</button>
-					<button class="quick-reply" data-query="prix">💶 Tarifs</button>
-					<button class="quick-reply" data-query="contact">📞 Contact</button>
+					<button class="quick-reply" data-query="cours">?? Voir les cours</button>
+					<button class="quick-reply" data-query="prix">?? Tarifs</button>
+					<button class="quick-reply" data-query="contact">?? Contact</button>
 				</div>
 			</div>
 		</div>
@@ -940,11 +940,11 @@
 		// Base de connaissances
 		const knowledgeBase = {
 			"bonjour": {
-				response: "Bonjour ! bienvenu à vous 😊 Comment puis-je vous aider aujourd'hui ?",
+				response: "Bonjour ! bienvenu à vous ?? Comment puis-je vous aider aujourd'hui ?",
 				quickReplies: [ "Cours disponibles", "Tarifs", "Contact" ]
 			},
 			"cours": {
-				response: "Nous proposons des cours dans plusieurs disciplines :\n\n📚 Mathématiques\n📝 Français\n🌍 Anglais\n💻 Informatique\n🎨 Arts\n\nQuel domaine vous intéresse ?",
+				response: "Nous proposons des cours dans plusieurs disciplines :\n\n?? Mathématiques\n?? Français\n?? Anglais\n?? Informatique\n?? Arts\n\nQuel domaine vous intéresse ?",
 				quickReplies: [ "Mathématiques", "Anglais", "Informatique" ]
 			},
 			"prix": {
@@ -952,7 +952,7 @@
 				quickReplies: [ "Forfaits", "Paiement", "Contact" ]
 			},
 			"contact": {
-				response: "Vous pouvez nous contacter :\n\n📞 Téléphone : 0101-0101-0101\n📧 Email : info@if-eduprime.com\n📍 Adresse : Abidjan, Côte d'Ivoire\n\nHoraires : Lundi-Vendredi 8h-18h",
+				response: "Vous pouvez nous contacter :\n\n?? Téléphone : 0101-0101-0101\n?? Email : info@if-eduprime.com\n?? Adresse : Abidjan, Côte d'Ivoire\n\nHoraires : Lundi-Vendredi 8h-18h",
 				quickReplies: [ "Email", "Téléphone", "Adresse" ]
 			},
 			"default": {
@@ -1148,22 +1148,21 @@
 	});
 </script>
 
-<!--==================================================-->
-<!-- Start Search Popup Section -->
-<!--==================================================-->
-<div class="search-popup">
-	<button class="close-search style-two"><span class="flaticon-multiply"><i class="far fa-times-circle"></i></span></button>
-	<button class="close-search"><i class="bi bi-arrow-up"></i></button>
-	<form method="post" action="#">
-		<div class="form-group">
-			<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-			<button type="submit"><i class="fa fa-search"></i></button>
-		</div>
-	</form>
-</div>
-<!--==================================================-->
-<!-- Start Search Popup Section -->
-<!--==================================================-->
+	<!--==================================================-->
+	<!-- Start Search Popup Section -->
+	<!--==================================================-->
+	<div class="search-popup">
+		<button class="close-search style-two" aria-label="Fermer"><i class="fas fa-times"></i></button>
+		<form method="get" action="course.html">
+			<div class="form-group">
+				<input type="search" name="search-field" value="" placeholder="Rechercher une formation, un cours..." required="">
+				<button type="submit" aria-label="Rechercher"><i class="fas fa-search"></i></button>
+			</div>
+		</form>
+	</div>
+	<!--==================================================-->
+	<!-- Start Search Popup Section -->
+	<!--==================================================-->
 
 
 <!--==================================================-->

@@ -25,10 +25,12 @@
 
      //Header Search
     if($('.search-box-outer').length) {
-        $('.search-box-outer').on('click', function() {
+        $('.search-box-outer').on('click', function(e) {
+            e.preventDefault();
             $('body').addClass('search-active');
         });
-        $('.close-search').on('click', function() {
+        $('.close-search').on('click', function(e) {
+            e.preventDefault();
             $('body').removeClass('search-active');
         });
     }
